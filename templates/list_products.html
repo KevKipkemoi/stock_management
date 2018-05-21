@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Stock Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    {% include 'includes/pagenav.html' %}
+
+    <div class="container" role="main" style="margin-top: 50pt;">
+        <div class="jumbotron">
+            {% for item in product %}
+                <li><a href="/product/{{ item.id }}">{{ item.name }}</a></li>
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+</html>
